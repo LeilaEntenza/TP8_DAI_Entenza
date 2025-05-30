@@ -30,15 +30,15 @@ const styles = StyleSheet.create({
 
   header: {
     backgroundColor: 'purple',
+    alignItems: 'center',
     justifyContent: 'center',
-    alignItems: 'end',
     height: 80
   },
 
   headerText: {
     color: 'white',
     textAlign: 'center',
-    fontSize: 17
+    fontSize: 17,
   },
 
   imagen: {
