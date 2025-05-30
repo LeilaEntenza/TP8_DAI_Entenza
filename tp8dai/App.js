@@ -3,13 +3,18 @@ import { SafeAreaView, StyleSheet, Text, View, Image, TextInputComponent, TextIn
 
 export default function App() {
   return (
-    <SafeAreaView style={styles.container}>
-      <Image source={{uri: 'https://i.pinimg.com/736x/26/31/01/263101e6d2a00ab9d94b59e4706666e3.jpg'}} style={styles.imagen}/>
-      <TextInput placeholderTextColor='grey' placeholder ='mail' style={styles.input}/>
-      <TextInput placeholderTextColor='grey' placeholder='contraseña' style={styles.input}/>
-      <Pressable style={styles.ingresar}><Text style={styles.ingresarText}>INGRESAR</Text></Pressable>
-      <Text style={styles.textoDefault}>¿Olvidaste la clave?</Text>
-      <Text style={styles.textoDefault}>Crear Cuenta</Text>
+    <SafeAreaView style={{flex:1}}>
+      <View style={styles.header}>
+      <Text style={styles.headerText}>Login App Entenza</Text>
+      </View>
+      <View style={styles.container}>
+        <Image source={{uri: 'https://i.pinimg.com/736x/26/31/01/263101e6d2a00ab9d94b59e4706666e3.jpg'}} style={styles.imagen}/>
+        <TextInput placeholderTextColor='grey' placeholder ='mail' style={styles.input}/>
+        <TextInput secureTextEntry={true} placeholderTextColor='grey' placeholder='contraseña' style={styles.input}/>
+        <Pressable style={styles.ingresar}><Text style={styles.ingresarText}>INGRESAR</Text></Pressable>
+        <Text style={styles.textoDefault}>¿Olvidaste la clave?</Text>
+        <Text style={styles.textoDefault}>Crear Cuenta</Text>
+      </View>
       <StatusBar style="dark" />
     </SafeAreaView>
   );
@@ -21,6 +26,19 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+
+  header: {
+    backgroundColor: 'purple',
+    justifyContent: 'center',
+    alignItems: 'end',
+    height: 80
+  },
+
+  headerText: {
+    color: 'white',
+    textAlign: 'center',
+    fontSize: 17
   },
 
   imagen: {
