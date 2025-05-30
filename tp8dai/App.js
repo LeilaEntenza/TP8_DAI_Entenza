@@ -15,7 +15,7 @@ export default function App() {
         <Text style={styles.textoDefault}>¿Olvidaste la clave?</Text>
         <Text style={styles.textoDefault}>Crear Cuenta</Text>
       </View>
-      <StatusBar style="dark" />
+      <StatusBar style="light" />
     </SafeAreaView>
   );
 }
